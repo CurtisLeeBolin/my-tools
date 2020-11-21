@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 before="$1"
 after="$3"
 
