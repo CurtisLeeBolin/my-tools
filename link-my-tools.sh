@@ -4,7 +4,7 @@ for i in ~/Projects/my-tools/*.{py,sh}; do
   j="${i##*/}"
   j="${j%.??}"
 
-  if [ -e ~/.local/bin/"${j}" ]; then
+  if [ -L ~/.local/bin/"${j}" ]; then
     rm ~/.local/bin/"${j}"
   fi
 
