@@ -1,8 +1,8 @@
 #!/bin/bash
 
-for i in ~/Projects/my-tools/*.sh; do
+for i in ~/Projects/my-tools/*.{py,sh}; do
 	j="${i##*/}"
-  j="${j%.sh}"
+  j="${j%.??}"
 
 	if [ -f ~/.local/bin/"${j}" ]; then
  		rm ~/.local/bin/"${j}"
