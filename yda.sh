@@ -6,10 +6,10 @@
 url=$@
 
 download_video () {
-  youtube-dl --format=bestaudio --embed-thumbnail --add-metadata \
+  youtube-dl --format=bestaudio --add-metadata \
     --merge-output-format ogg --ignore-errors \
     --cookies ~/.config/youtube-dl/cookies.txt \
-    --output "%(uploader_id)s - %(title)s (%(id)s).ogg" "$1"
+    --output "%(uploader)s - %(title)s (%(id)s).ogg" "$1"
 }
 
 if [[ "$url" =~ ( |\') ]]; then

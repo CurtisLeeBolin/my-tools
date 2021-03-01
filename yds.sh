@@ -15,10 +15,10 @@ shift
 search_term=$@
 
 download_video () {
-  youtube-dl --embed-subs --embed-thumbnail --add-metadata \
+  youtube-dl --embed-subs --add-metadata \
     --merge-output-format mkv --ignore-errors --sub-lang en \
     --cookies ~/.config/youtube-dl/cookies.txt \
-    --output "%(uploader_id)s - %(title)s (%(id)s).%(ext)s" "ytsearch$count:$search_term"
+    --output "%(uploader)s - %(title)s (%(id)s).%(ext)s" "ytsearch$count:$search_term"
 }
 
 download_video $search_term
